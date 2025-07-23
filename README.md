@@ -1,3 +1,7 @@
+# prosit
+
+Fork personalizzato di [Lizmap Web Application 3.6.2](https://github.com/3liz/lizmap-web-client)
+
 # [![logo](icon.png "3Liz")][3liz]Lizmap Web Application 3.6.2
 
 [![Unit tests 🎳](https://github.com/3liz/lizmap-web-client/actions/workflows/tests.yml/badge.svg)](https://github.com/3liz/lizmap-web-client/actions/workflows/tests.yml)
@@ -24,6 +28,14 @@ The Lizmap web application must be installed on the server.
 The Original Code is [3Liz](https://3liz.com) code.
 
 You can find help and news by subscribing to the mailing list: https://lists.osgeo.org/mailman/listinfo/lizmap.
+
+## About this fork
+
+This repository **is a customized fork of Lizmap Web Application version 3.6.2**, renamed "prosit" for internal use.
+
+The original Lizmap Web Application is developed and maintained by 3Liz.
+
+This fork may contain specific adaptations and should be used accordingly.
 
 ## Versions
 
