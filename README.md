@@ -1,4 +1,4 @@
-# [![logo](icon.png "3Liz")][3liz]Lizmap Web Application 3.11.0-pre
+# [![logo](icon.png "3Liz")][3liz]Lizmap Web Application 3.6.2
 
 [![Unit tests 🎳](https://github.com/3liz/lizmap-web-client/actions/workflows/tests.yml/badge.svg)](https://github.com/3liz/lizmap-web-client/actions/workflows/tests.yml)
 [![Lint](https://github.com/3liz/lizmap-web-client/actions/workflows/lint.yml/badge.svg)](https://github.com/3liz/lizmap-web-client/actions/workflows/lint.yml)
@@ -27,8 +27,7 @@ You can find help and news by subscribing to the mailing list: https://lists.osg
 
 ## Versions
 
-We recommend you reading the [versions](https://github.com/3liz/lizmap-web-client/wiki/Versions) page about QGIS Server,
-web-browsers etc.
+3.6.2
 
 ## Main Features
 
