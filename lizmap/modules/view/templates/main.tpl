@@ -64,7 +64,7 @@
 </div>
 
 <!-- Add button to scroll up and script -->
-<button onclick="topFunction()" id="myBtn" title="Vai su">&#8593 Top</button>
+<button onclick="topFunction()" id="scrollTopBtn" title="Vai su">&#8593 Top</button>
 <script src="/lizmap/assets/js/jquery/scroll_top.js"></script>
 
 {if $googleTag && $googleTag != ''}
