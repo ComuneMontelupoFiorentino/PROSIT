@@ -63,6 +63,10 @@
   </footer>
 </div>
 
+<!-- Add button to scroll up and script -->
+<button onclick="topFunction()" id="myBtn" title="Vai su">&#8593 Top</button>
+<script src="/lizmap/assets/js/jquery/scroll_top.js"></script>
+
 {if $googleTag && $googleTag != ''}
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={$googleTag}"></script>
