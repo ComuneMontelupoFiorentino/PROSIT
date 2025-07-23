@@ -1,4 +1,4 @@
-# prosit
+# PROSIT
 
 Fork personalizzato di [Lizmap Web Application 3.6.2](https://github.com/3liz/lizmap-web-client)
 
