@@ -1,0 +1,55 @@
+publiccodeYmlVersion: 0.4.0
+name: Lizmap-web-client
+applicationSuite: Lizmap
+url: https://github.com/3liz/lizmap-web-client
+landingURL: https://docs.lizmap.com/current/it/introduction.html#
+isBasedOn: https://github.com/ComuneMontelupoFiorentino/lizmap-web-client
+softwareVersion: "3.6"
+platforms:
+  - web
+  - linux
+  - windows
+categories:
+  - geographic-information-systems
+  - content-management
+  - data-visualization
+  - data-analytics
+  - data-collection
+developmentStatus: stable
+softwareType: standalone/web
+description:
+  en:
+    localisedName: Lizmap Web Client
+    shortDescription: Transfer a QGIS project on a server, Lizmap is providing the
+      web interface to browse it
+    longDescription: >-
+      Lizmap Web Client is an open-source web application designed to publish
+      interactive web maps created with QGIS Desktop. It allows organizations,
+      to share geospatial data through a user-friendly interface. Lizmap
+      integrates with QGIS Server and supports advanced features such as
+      attribute filtering, spatial querying, print layouts, user authentication,
+      and group-based access control.
+
+
+      The platform is highly configurable, supports multilingual interfaces, and
+      is extensible through simple JS code. It enables the publication of data
+      in compliance with open data principles and supports standard OGC services
+      like WMS, WFS, and WMTS. Lizmap is widely used by pubblic administrations
+      for building web-based GIS portals.
+    documentation: https://docs.lizmap.com/current/it/
+    features:
+      - WebGIS builder from QGIS
+      - Data visualization and updating
+      - Users and privileges management
+legal:
+  license: LGPL-2.1-or-later
+maintenance:
+  type: internal
+localisation:
+  localisationReady: true
+  availableLanguages:
+    - it-IT
+    - fr
+    - en
+    - de
+    - es
