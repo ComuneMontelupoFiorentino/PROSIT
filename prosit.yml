@@ -84,10 +84,17 @@ componenti:
   prosit-monitor:
     descrizione: controllo di script e Lizmap, riquadro in Amministrazione (modulo prositmonitor), pulizia log
     repository: https://github.com/ComuneMontelupoFiorentino/prosit-monitor
-    ref: 524bc5835560d9dc8931b86346a6d3dc2a543035   # versione 1.0.0, con il modulo Lizmap prositmonitor
+    ref: 87d32174cbf34a2adef4c83643886071d4ecd867   # versione 1.0.0, con il modulo Lizmap prositmonitor
     installazione: /usr/local/bin/prosit/monitor, lizmap/lizmap-modules/prositmonitor, cron ogni 10 minuti
     dipende_da: [lizmap-web-client]
 
+
+  imap-sync:
+    descrizione: lettura della casella delle manomissioni (IMAP) verso PostgreSQL
+    repository: null         # in pubblicazione
+    ref: null
+    installazione: /usr/local/bin/prosit/IMAP-extract-body-mail2pg, cron ogni 15 minuti con PHP 8.3 (estensione imap)
+    dipende_da: [postgresql]
 
   strumenti:
     descrizione: aggiorna_lizmap.sh e script JavaScript per Lizmap

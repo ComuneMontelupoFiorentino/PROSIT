@@ -73,6 +73,7 @@ flowchart TB
 | CKAN-API-sync-sit2ckan | pubblicazione pianificata degli open data da PostgreSQL su CKAN (v2, CKAN Scheduler) | [repository](https://github.com/ComuneMontelupoFiorentino/CKAN-API-sync-sit2ckan) | EUPL-1.2 |
 | MAIL-SMTP-PostgreSQL__sender | invio delle mail accodate in una tabella PostgreSQL | [repository](https://github.com/ComuneMontelupoFiorentino/MAIL-SMTP-PostgreSQL__sender) | EUPL-1.2 |
 | GTFS-PostgreSQL-upsert_gtfs2sit | orari del trasporto pubblico (GTFS) in PostgreSQL per i popup delle paline | [repository](https://github.com/ComuneMontelupoFiorentino/GTFS-PostgreSQL-upsert_gtfs2sit) | EUPL-1.2 |
+| IMAP-extract-body-mail2pg | lettura della casella delle manomissioni (IMAP) verso PostgreSQL, ogni 15 minuti | *in pubblicazione* | EUPL-1.2 |
 | Strumenti di esercizio | aggiornamento sicuro di Lizmap (`aggiorna_lizmap.sh`), script JS per Lizmap | *in pubblicazione* | — |
 
 ### Di terze parti
@@ -109,7 +110,7 @@ file di esempio con segnaposto (`pg_service.conf`, `*.ini`).
 2. QGIS Server e Lizmap Web Client, poi il tema [pa-it](https://github.com/ComuneMontelupoFiorentino/lizmap-tema-pa-it).
 3. prosit-api (PostgREST e modulo `prositapi`), poi prosit-web.
 4. lizmap-realtime, se servono livelli in tempo reale.
-5. Gli script di sincronizzazione (Twproject, ANNCSU, CKAN, mail, GTFS), ognuno con il proprio cron.
+5. Gli script di sincronizzazione (Twproject, ANNCSU, CKAN, mail, GTFS, IMAP), ognuno con il proprio cron.
 6. prosit-monitor, che controlla tutti gli script del punto 5.
 
 Ogni repository ha nel README le istruzioni dettagliate.
