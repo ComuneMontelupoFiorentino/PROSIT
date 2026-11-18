@@ -64,7 +64,7 @@ flowchart TB
 | Componente | Cosa fa | Repository | Licenza |
 |---|---|---|---|
 | prosit-api | API v2: modulo Lizmap `prositapi` + PostgREST, permessi dai gruppi Lizmap, OpenAPI | *in pubblicazione* | — |
-| prosit-web | schede dei popup, registro TVCC, calendario verde, report ticket, open data, API v1 e hook (meteo, QField, sopralluoghi), JS dei progetti Lizmap | [prosit-web](https://github.com/ComuneMontelupoFiorentino/prosit-web) | da definire |
+| prosit-web | schede dei popup, registro TVCC, calendario verde, report ticket, open data, API v1 e hook (meteo, QField, sopralluoghi), JS dei progetti Lizmap | *in pubblicazione* | da definire |
 | prosit-monitor | controllo degli script e di Lizmap, riquadro nell'Amministrazione di Lizmap, pulizia dei log | [prosit-monitor](https://github.com/ComuneMontelupoFiorentino/prosit-monitor) | da definire |
 | lizmap-realtime | livelli in tempo reale in Lizmap (bus, sensori, meteo) | [lizmap-realtime](https://github.com/ComuneMontelupoFiorentino/lizmap-realtime) | MPL-2.0 |
 | lizmap-tema-pa-it | tema Lizmap in stile Bootstrap Italia | [lizmap-tema-pa-it](https://github.com/ComuneMontelupoFiorentino/lizmap-tema-pa-it) | da definire |
@@ -129,6 +129,15 @@ alle altre. Per aggiornare un componente:
 1. si rilascia il componente nel suo repository (tag e CHANGELOG);
 2. si aggiorna la sua riga in `prosit.yml` e in [CHANGELOG.md](CHANGELOG.md);
 3. si crea un nuovo rilascio di Prosit.
+
+## Strumenti
+
+Da lanciare dal proprio PC con la [GitHub CLI](https://cli.github.com) autenticata (`gh auth login`):
+
+```bash
+bash strumenti/imposta-topic.sh     # topic "prosit" su tutti i repository dei componenti
+bash strumenti/crea-versioni.sh     # tag e release indicati in prosit.yml
+```
 
 ## Aggiungere un componente
 
