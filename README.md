@@ -63,22 +63,16 @@ flowchart TB
 
 | Componente | Cosa fa | Repository | Licenza |
 |---|---|---|---|
-| prosit-api | API v2: modulo Lizmap `prositapi` + PostgREST, permessi dai gruppi Lizmap, OpenAPI | [prosit-api](https://github.com/ComuneMontelupoFiorentino/prosit-api) | da definire |
-| prosit-web | schede dei popup, registro TVCC, calendario verde, report ticket, open data, API v1 e hook (meteo, QField, sopralluoghi), JS dei progetti Lizmap | [prosit-web](https://github.com/ComuneMontelupoFiorentino/prosit-web) | da definire |
-| prosit-monitor | controllo degli script e di Lizmap, riquadro nell'Amministrazione di Lizmap, pulizia dei log | [prosit-monitor](https://github.com/ComuneMontelupoFiorentino/prosit-monitor) | da definire |
+| prosit-api | API v2: modulo Lizmap `prositapi` + PostgREST, permessi dai gruppi Lizmap, OpenAPI | [prosit-api](https://github.com/ComuneMontelupoFiorentino/prosit-api) | EUPL-1.2 |
+| prosit-web | schede dei popup, registro TVCC, calendario verde, report ticket, open data, API v1 e hook (meteo, QField, sopralluoghi), JS dei progetti Lizmap | [prosit-web](https://github.com/ComuneMontelupoFiorentino/prosit-web) | EUPL-1.2 |
+| prosit-monitor | controllo degli script e di Lizmap, riquadro nell'Amministrazione di Lizmap, pulizia dei log | [prosit-monitor](https://github.com/ComuneMontelupoFiorentino/prosit-monitor) | EUPL-1.2 |
 | lizmap-realtime | livelli in tempo reale in Lizmap (bus, sensori, meteo) | [lizmap-realtime](https://github.com/ComuneMontelupoFiorentino/lizmap-realtime) | MPL-2.0 |
-| lizmap-tema-pa-it | tema Lizmap in stile Bootstrap Italia | [lizmap-tema-pa-it](https://github.com/ComuneMontelupoFiorentino/lizmap-tema-pa-it) | da definire |
+| lizmap-tema-pa-it | tema Lizmap in stile Bootstrap Italia | [lizmap-tema-pa-it](https://github.com/ComuneMontelupoFiorentino/lizmap-tema-pa-it) | MPL-2.0 |
 | TWPROJECT-PostgreSQL-API-sync-pg2twprj | ticket di Prosit ↔ ToDo di Twproject (stati, commenti, allegati) | [repository](https://github.com/ComuneMontelupoFiorentino/TWPROJECT-PostgreSQL-API-sync-pg2twprj) | EUPL-1.2 |
 | ANNCSU-PostgreSQL-PDND-sync | invio di coordinate, civici e odonimi all'ANNCSU tramite PDND | [repository](https://github.com/ComuneMontelupoFiorentino/ANNCSU-PostgreSQL-PDND-sync) | EUPL-1.2 |
-| CKAN-API-sync-sit2ckan | pubblicazione pianificata degli open data da PostgreSQL su CKAN (v2, CKAN Scheduler) | [repository](https://github.com/ComuneMontelupoFiorentino/CKAN-API-sync-sit2ckan) | da definire |
-| MAIL-SMTP-PostgreSQL__sender | invio delle mail accodate in una tabella PostgreSQL | [repository](https://github.com/ComuneMontelupoFiorentino/MAIL-SMTP-PostgreSQL__sender) | da definire |
-| GTFS-PostgreSQL-upsert_gtfs2sit | orari del trasporto pubblico (GTFS) in PostgreSQL per i popup delle paline | [repository](https://github.com/ComuneMontelupoFiorentino/GTFS-PostgreSQL-upsert_gtfs2sit) | da definire |
-| IMAP-extract-body-mail2pg | lettura delle caselle mail (IMAP) verso PostgreSQL | *in pubblicazione* | — |
-| REKLA-notify__scheduler | promemoria e report di Rekla | *in pubblicazione* | — |
-| EXECUTE-schedulation-manager__scheduler | pianificatore delle attività su database | *in pubblicazione* | — |
-| UPSERT-sync-db2pgsql__trigger | sincronizzazione del censimento verso PostgreSQL | *in pubblicazione* | — |
-| Lizmap-PostgreSQL-sync-sqlite2pg | utenti di Lizmap verso PostgreSQL (da spegnere dopo la migrazione degli utenti) | *in pubblicazione* | — |
-| TRANSFER-DB-compressed__pg2zip | copia e ripristino compressi dei database | *in pubblicazione* | — |
+| CKAN-API-sync-sit2ckan | pubblicazione pianificata degli open data da PostgreSQL su CKAN (v2, CKAN Scheduler) | [repository](https://github.com/ComuneMontelupoFiorentino/CKAN-API-sync-sit2ckan) | EUPL-1.2 |
+| MAIL-SMTP-PostgreSQL__sender | invio delle mail accodate in una tabella PostgreSQL | [repository](https://github.com/ComuneMontelupoFiorentino/MAIL-SMTP-PostgreSQL__sender) | EUPL-1.2 |
+| GTFS-PostgreSQL-upsert_gtfs2sit | orari del trasporto pubblico (GTFS) in PostgreSQL per i popup delle paline | [repository](https://github.com/ComuneMontelupoFiorentino/GTFS-PostgreSQL-upsert_gtfs2sit) | EUPL-1.2 |
 | Strumenti di esercizio | aggiornamento sicuro di Lizmap (`aggiorna_lizmap.sh`), script JS per Lizmap | *in pubblicazione* | — |
 
 ### Di terze parti
@@ -115,7 +109,7 @@ file di esempio con segnaposto (`pg_service.conf`, `*.ini`).
 2. QGIS Server e Lizmap Web Client, poi il tema [pa-it](https://github.com/ComuneMontelupoFiorentino/lizmap-tema-pa-it).
 3. prosit-api (PostgREST e modulo `prositapi`), poi prosit-web.
 4. lizmap-realtime, se servono livelli in tempo reale.
-5. Gli script di sincronizzazione (Twproject, ANNCSU, CKAN, mail, GTFS, IMAP, Rekla, …), ognuno con il proprio cron.
+5. Gli script di sincronizzazione (Twproject, ANNCSU, CKAN, mail, GTFS), ognuno con il proprio cron.
 6. prosit-monitor, che controlla tutti gli script del punto 5.
 
 Ogni repository ha nel README le istruzioni dettagliate.
