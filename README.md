@@ -139,6 +139,9 @@ bash strumenti/imposta-topic.sh     # topic "prosit" su tutti i repository dei c
 bash strumenti/crea-versioni.sh     # tag e release indicati in prosit.yml
 ```
 
+In alternativa, dalla pagina di ogni repository: topic con ⚙️ accanto a *About*, release con
+*Releases → Draft a new release* scegliendo il commit indicato in `prosit.yml`.
+
 ## Aggiungere un componente
 
 1. Nuovo repository nell'organizzazione, con README, LICENSE e file di configurazione solo di esempio.

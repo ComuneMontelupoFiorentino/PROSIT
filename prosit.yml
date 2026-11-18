@@ -1,6 +1,6 @@
 # Prosit: componenti e versioni che funzionano insieme.
 # Ogni rilascio di questo repository (tag AAAA.MM) fissa qui le versioni.
-# "ref" e' un tag del componente oppure, se il componente non ha ancora tag, un commit.
+# "ref" e' il commit del componente (nel commento la versione corrispondente).
 
 prosit:
   versione: "2026.11"        # bozza: diventa definitiva con il tag 2026.11
@@ -35,8 +35,7 @@ componenti:
   lizmap-realtime:
     descrizione: livelli in tempo reale per Lizmap
     repository: https://github.com/ComuneMontelupoFiorentino/lizmap-realtime
-    ref: v1.3.0
-    commit: b3ddba5bacc2c6312172b1013fa01c797aac317a
+    ref: 31187a7ff27a4b5ad7775391c15c9b7d82148749   # versione 1.3.0
     installazione: lizmap/lizmap-modules/realtime, media/js del repository Lizmap, raccoglitore in ~/lizmap-realtime
     dipende_da: [lizmap-web-client]
 
@@ -57,14 +56,14 @@ componenti:
   anncsu-sync:   # sulla VM la cartella si chiama ANNCSU-PostgreSQL-PDND-sync-main
     descrizione: coordinate, civici e odonimi verso ANNCSU tramite PDND
     repository: https://github.com/ComuneMontelupoFiorentino/ANNCSU-PostgreSQL-PDND-sync
-    ref: 80f9c2af67fd10035386aab8ecf3b67ba9a140f6   # publiccode.yml dichiara 0.1.4 (gennaio 2026), ma ci sono commit successivi
+    ref: a98197d04fda94549c19fb640ce7f5b8dc2f2cc2
     installazione: /usr/local/bin/prosit (da confermare), cron
     dipende_da: [postgresql]
 
   ckan-sync:
     descrizione: open data da PostgreSQL a CKAN e lettura dei datastore
     repository: https://github.com/ComuneMontelupoFiorentino/CKAN-API-sync-sit2ckan
-    ref: v2.0.0              # CKAN Scheduler; la versione precedente e' v1.0.0
+    ref: bb5dc5f3d0a74b9822ca88f363b3f92af1a920d4   # versione 2.0.0 (CKAN Scheduler); la precedente e' c9fa47ce570c7c835d67ed2bb18ea7995e6a3eac
     installazione: /usr/local/bin/prosit/CKAN-API-sync-sit2ckan, cron
     dipende_da: [postgresql]
 
@@ -78,14 +77,14 @@ componenti:
   gtfs-sync:
     descrizione: orari GTFS del trasporto pubblico in PostgreSQL (schema pums, tabelle tpl_*)
     repository: https://github.com/ComuneMontelupoFiorentino/GTFS-PostgreSQL-upsert_gtfs2sit
-    ref: v1.0.0
+    ref: 64f57034f6f2a57e0b59ec670b656653b75605ee   # versione 1.0.0
     installazione: /usr/local/bin/prosit/GTFS-PostgreSQL-upsert_gtfs2sit, cron notturno
     dipende_da: [postgresql]
 
   prosit-monitor:
     descrizione: controllo di script e Lizmap, riquadro in Amministrazione (modulo prositmonitor), pulizia log
     repository: https://github.com/ComuneMontelupoFiorentino/prosit-monitor
-    ref: v1.0.0
+    ref: 6d07c838f7d7e49f2a2ac4c1ea3b763bbc180440   # versione 1.0.0
     installazione: /usr/local/bin/prosit/monitor, lizmap/lizmap-modules/prositmonitor, cron ogni 10 minuti
     dipende_da: [lizmap-web-client]
 
