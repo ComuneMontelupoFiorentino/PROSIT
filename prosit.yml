@@ -49,8 +49,8 @@ componenti:
   twproject-sync:
     descrizione: ticket di Prosit <-> ToDo di Twproject
     repository: https://github.com/ComuneMontelupoFiorentino/TWPROJECT-PostgreSQL-API-sync-pg2twprj
-    ref: 8d39df4f603515d8a0d451054b6be3979be7f4f1
-    installazione: /usr/local/bin/prosit (da confermare), cron
+    ref: ff8e0effc02ef322e4b58c096ebed561438205ae   # versione in esercizio a novembre 2026, con integrazione web
+    installazione: /usr/local/bin/prosit/TWPROJECT-PostgreSQL-API-sync-pg2twprj, cron; endpoint http/ usati dagli hook sopralluoghi di prosit-web
     dipende_da: [postgresql]
 
   anncsu-sync:   # sulla VM la cartella si chiama ANNCSU-PostgreSQL-PDND-sync-main
