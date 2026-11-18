@@ -1,0 +1,103 @@
+# Prosit: componenti e versioni che funzionano insieme.
+# Ogni rilascio di questo repository (tag AAAA.MM) fissa qui le versioni.
+# "ref" e' un tag del componente oppure, se il componente non ha ancora tag, un commit.
+
+prosit:
+  versione: "2026.11"        # bozza: diventa definitiva con il tag 2026.11
+  ente: Comune di Montelupo Fiorentino
+  organizzazione: https://github.com/ComuneMontelupoFiorentino
+  topic: prosit
+
+piattaforma:
+  postgresql: ">=16"         # con PostGIS e postgres_fdw
+  lizmap-web-client: "3.9.12"
+  qgis-server: null          # da completare
+  postgrest: "16.5"
+  php: "8.3"                 # PHP-FPM con Apache 2.4
+  firebase-php-jwt: "7.x"
+
+componenti:
+
+  prosit-api:
+    descrizione: API v2 (modulo Lizmap prositapi + PostgREST)
+    repository: null         # in pubblicazione
+    ref: "2.0.1"             # versione del modulo installata a novembre 2026
+    installazione: /opt/prosit-api, /etc/prosit-api, lizmap/lizmap-modules/prositapi
+    dipende_da: [postgresql, lizmap-web-client, postgrest, firebase-php-jwt]
+
+  prosit-web:
+    descrizione: schede, registro TVCC, calendario verde, report ticket, open data, API v1 e hook
+    repository: https://github.com/ComuneMontelupoFiorentino/prosit-web
+    ref: v2.1.1
+    installazione: /usr/local/bin/prosit/prosit-web (URL /lizmap/prosit/)
+    dipende_da: [lizmap-web-client, prosit-api]
+
+  lizmap-realtime:
+    descrizione: livelli in tempo reale per Lizmap
+    repository: https://github.com/ComuneMontelupoFiorentino/lizmap-realtime
+    ref: v1.3.0
+    commit: b3ddba5bacc2c6312172b1013fa01c797aac317a
+    installazione: lizmap/lizmap-modules/realtime, media/js del repository Lizmap, raccoglitore in ~/lizmap-realtime
+    dipende_da: [lizmap-web-client]
+
+  lizmap-tema-pa-it:
+    descrizione: tema Lizmap in stile Bootstrap Italia
+    repository: https://github.com/ComuneMontelupoFiorentino/lizmap-tema-pa-it
+    ref: adc00f36ffd6ee6b03292f01ec574b005fce46c1
+    installazione: lizmap/www/themes/pa-it, lizmap/var/themes/pa-it
+    dipende_da: [lizmap-web-client]
+
+  twproject-sync:
+    descrizione: ticket di Prosit <-> ToDo di Twproject
+    repository: https://github.com/ComuneMontelupoFiorentino/TWPROJECT-PostgreSQL-API-sync-pg2twprj
+    ref: 8d39df4f603515d8a0d451054b6be3979be7f4f1
+    installazione: /usr/local/bin/prosit (da confermare), cron
+    dipende_da: [postgresql]
+
+  anncsu-sync:   # sulla VM la cartella si chiama ANNCSU-PostgreSQL-PDND-sync-main
+    descrizione: coordinate, civici e odonimi verso ANNCSU tramite PDND
+    repository: https://github.com/ComuneMontelupoFiorentino/ANNCSU-PostgreSQL-PDND-sync
+    ref: 80f9c2af67fd10035386aab8ecf3b67ba9a140f6   # publiccode.yml dichiara 0.1.4 (gennaio 2026), ma ci sono commit successivi
+    installazione: /usr/local/bin/prosit (da confermare), cron
+    dipende_da: [postgresql]
+
+  ckan-sync:
+    descrizione: open data da PostgreSQL a CKAN e lettura dei datastore
+    repository: https://github.com/ComuneMontelupoFiorentino/CKAN-API-sync-sit2ckan
+    ref: v2.0.0              # CKAN Scheduler; la versione precedente e' v1.0.0
+    installazione: /usr/local/bin/prosit/CKAN-API-sync-sit2ckan, cron
+    dipende_da: [postgresql]
+
+  mail-sender:
+    descrizione: invio delle mail accodate in PostgreSQL
+    repository: https://github.com/ComuneMontelupoFiorentino/MAIL-SMTP-PostgreSQL__sender
+    ref: 98421abd364addc60b3a90afe3ce03a3b011fe5b
+    installazione: /usr/local/bin/prosit (da confermare), cron
+    dipende_da: [postgresql]
+
+  gtfs-sync:
+    descrizione: orari GTFS del trasporto pubblico in PostgreSQL (schema pums, tabelle tpl_*)
+    repository: https://github.com/ComuneMontelupoFiorentino/GTFS-PostgreSQL-upsert_gtfs2sit
+    ref: v1.0.0
+    installazione: /usr/local/bin/prosit/GTFS-PostgreSQL-upsert_gtfs2sit, cron notturno
+    dipende_da: [postgresql]
+
+  prosit-monitor:
+    descrizione: controllo di script e Lizmap, riquadro in Amministrazione (modulo prositmonitor), pulizia log
+    repository: https://github.com/ComuneMontelupoFiorentino/prosit-monitor
+    ref: v1.0.0
+    installazione: /usr/local/bin/prosit/monitor, lizmap/lizmap-modules/prositmonitor, cron ogni 10 minuti
+    dipende_da: [lizmap-web-client]
+
+  # sulla VM, controllati da prosit-monitor, codice non ancora pubblicato:
+  imap-sync:      {repository: null, installazione: /usr/local/bin/prosit/IMAP-extract-body-mail2pg}
+  rekla-notify:   {repository: null, installazione: /usr/local/bin/prosit/REKLA-notify__scheduler}
+  execute:        {repository: null, installazione: /usr/local/bin/prosit/EXECUTE-schedulation-manager__scheduler}
+  upsert-sync:    {repository: null, installazione: /usr/local/bin/prosit/UPSERT-sync-db2pgsql__trigger}
+  lizmap-users:   {repository: null, installazione: /usr/local/bin/prosit/Lizmap-PostgreSQL-sync-sqlite2pg}
+  transfer-db:    {repository: null, installazione: /usr/local/bin/prosit/TRANSFER-DB-compressed__pg2zip}
+
+  strumenti:
+    descrizione: aggiorna_lizmap.sh e script JavaScript per Lizmap
+    repository: null         # in pubblicazione
+    ref: null
