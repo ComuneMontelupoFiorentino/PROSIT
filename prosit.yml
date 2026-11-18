@@ -20,15 +20,15 @@ componenti:
 
   prosit-api:
     descrizione: API v2 (modulo Lizmap prositapi + PostgREST)
-    repository: null         # in pubblicazione
-    ref: "2.0.1"             # versione del modulo installata a novembre 2026
+    repository: https://github.com/ComuneMontelupoFiorentino/prosit-api
+    ref: 954ebfb79cc48d49865cf440f49d121db3f7f136   # versione 2.0.1 (modulo prositapi)
     installazione: /opt/prosit-api, /etc/prosit-api, lizmap/lizmap-modules/prositapi
     dipende_da: [postgresql, lizmap-web-client, postgrest, firebase-php-jwt]
 
   prosit-web:
     descrizione: schede, registro TVCC, calendario verde, report ticket, open data, API v1 e hook
-    repository: https://github.com/ComuneMontelupoFiorentino/prosit-web   # in pubblicazione
-    ref: v2.1.1
+    repository: https://github.com/ComuneMontelupoFiorentino/prosit-web
+    ref: 5c6e2fd9dc2c3a5222a74198c92af79d5203b957   # versione 2.1.1
     installazione: /usr/local/bin/prosit/prosit-web (URL /lizmap/prosit/)
     dipende_da: [lizmap-web-client, prosit-api]
 

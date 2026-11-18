@@ -8,7 +8,7 @@ Primo rilascio del repository centrale.
 
 - Elenco dei componenti, architettura e ordine di installazione.
 - Topic `prosit` su tutti i repository dei componenti.
-- Componenti: prosit-web 2.1.1, prosit-monitor 1.0.0, GTFS sync 1.0.0, lizmap-realtime 1.3.0,
+- Componenti: prosit-api 2.0.1, prosit-web 2.1.1, prosit-monitor 1.0.0, GTFS sync 1.0.0, lizmap-realtime 1.3.0,
   lizmap-tema-pa-it, Twproject sync, ANNCSU sync, CKAN sync 2.0.0, mail sender.
-- Da pubblicare: prosit-api 2.0.1, IMAP, Rekla, EXECUTE, UPSERT, utenti Lizmap,
+- Da pubblicare: IMAP, Rekla, EXECUTE, UPSERT, utenti Lizmap,
   TRANSFER-DB, strumenti di esercizio.

@@ -22,6 +22,7 @@ REPO_TOPIC=(
   "CKAN-API-sync-sit2ckan                  ckan open-data postgresql api"
   "MAIL-SMTP-PostgreSQL__sender            smtp email postgresql"
   "prosit-web                              lizmap php api"
+  "prosit-api                              postgrest lizmap rest-api openapi postgresql"
   "prosit-monitor                          monitoring lizmap php"
   "GTFS-PostgreSQL-upsert_gtfs2sit         gtfs trasporto-pubblico postgis lizmap"
 )
