@@ -84,7 +84,7 @@ componenti:
   prosit-monitor:
     descrizione: controllo di script e Lizmap, riquadro in Amministrazione (modulo prositmonitor), pulizia log
     repository: https://github.com/ComuneMontelupoFiorentino/prosit-monitor
-    ref: 6d07c838f7d7e49f2a2ac4c1ea3b763bbc180440   # versione 1.0.0
+    ref: 6c8d44918e6e2853682042ea1ff6ffefd75e47a3   # versione 1.0.0, con il modulo Lizmap prositmonitor
     installazione: /usr/local/bin/prosit/monitor, lizmap/lizmap-modules/prositmonitor, cron ogni 10 minuti
     dipende_da: [lizmap-web-client]
 
